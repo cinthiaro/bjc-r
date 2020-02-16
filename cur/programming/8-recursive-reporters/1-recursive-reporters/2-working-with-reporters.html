@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        
         <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
         <title>Unit 8 Lab 1: Recursive Reporters, Page 2</title>
         <link href="/bjc-r/advancednote.css" rel="stylesheet" type="text/css">
     </head>
 
     <body>
-        <h2>Working with Recursive Reporters</h2>
+        <h2>Trabajando con reporteros recursivos</h2>
         <div class="todo">
-            <p>PG: Drastic change, based on whatever we do with "counting branches" (not trees—there's only one tree), this should change. The reporter is so special-purpose, whereas a n^m block is both /less/ complex (more straightforward) and /more/ generally useful, e.g., for counting the triangle's children.</p>
-            <ul><li>I had written n^m into <a href="/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/2-math-predicates.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&course=bjc4nyc.html&novideo&noassignment">U2 Math Tools</a>, but it's now a primative. --MF, 4/5/19</li></ul>
+            <p>PG: Drastic change, based on whatever we do with "counting branches" (not trees&mdash;there's only one tree), this should change. The reporter is so special-purpose, whereas a n^m block is both /less/ complex (more straightforward) and /more/ generally useful, e.g., for counting the triangle's children.</p>
+            <ul>
+<li>I had written n^m into <a href="/bjc-r/cur/programming/2-complexity/4-making-computers-do-math/2-math-predicates.html?topic=nyc_bjc%2F2-conditionals-abstraction.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment">U2 Math Tools</a>, but it's now a primative. --MF, 4/5/19</li></ul>
             <p>MF: Need to adjust for changes throughout curriculum</p>
         </div>
         
-        <p>Here's Betty's code for the <code>segments in tree</code> function:</p>
+        <p>Aqu&iacute; est&aacute; el c&oacute;digo de Betty para los <code>segmentos</code> en funci&oacute;n <code>&aacute;rbol</code>:</p>
 
         <div class="comment">Image should be redone with plain prototype labels. --MF, 9/26/18</div>
-        <img class="indent" src="/bjc-r/img/8-recursive-reporters/bettycode.png" alt="segments in tree(n){if(n=1){report(1)}else{report(1+2*segments in tree(n-1))}}"  title="segments in tree(n){if(n=1){report(1)}else{report(1+2*segments in tree(n-1))}}" />
-        <div class="takeNote">The <code>report</code> block only connects to the blocks <em>above</em> it. That's because <code>report</code> returns the result of its input slot, immediately, as the output of the <code>segments in tree</code> reporter block. No further code is executed in a reporter after a <code>report</code> block.</div>
+        <img class="indent" src="/bjc-r/img/8-recursive-reporters/bettycode.png" alt="segments in tree(n){if(n=1){report(1)}else{report(1+2*segments in tree(n-1))}}" title="segments in tree(n){if(n=1){report(1)}else{report(1+2*segments in tree(n-1))}}">
+        <div class="takeNote">El bloque <code>reportero</code> solamente conecta con los bloques que est&aacute;n <em>encima</em> de &eacute;l. Eso se debe a que el <code>reportero</code> devuelve el resultado de su ranura de entrada, inmediatamente, como la salida de los <code>segmentos</code> en el bloque de informe de <code>&aacute;rbol</code>. No se ejecuta ning&uacute;n otro c&oacute;digo en un reportero despu&eacute;s de un bloque de <code>reporte</code>.</div>
         
         <div class="forYouToDo" id="first">
             <ol>
-                <li><img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner" /> What is the base case in the script above? Why is it necessary? How does it work in this script?</li>
-                <li>The <code>tree</code> command had two recursive calls, but this code has only one. Why?</li>
+                <li><img class="inline" src="/bjc-r/img/icons/talk-with-your-partner.png" alt="Talk with Your Partner" title="Talk with Your Partner"> &iquest;Cu&aacute;l es el caso base del script anterior? &iquest;Por qu&eacute; es necesario? &iquest;C&oacute;mo funciona en este script?</li>
+                <li>El comando <span style="font-family: monospace;">&aacute;rbol</span><code></code> ten&iacute;a dos llamadas recursivas, pero este c&oacute;digo solo tiene una. &iquest;Por qu&eacute;?</li>
             <!--</ol>
         </div>
         
@@ -33,9 +35,8 @@
         <div class="forYouToDo">
             <ol start="3">-->
                 <li>
-                    <div class="sidenoteBig">Re-read the code for the triangle fractal, and use it to help you build this recursive reporter.</div>
-                	<a href="/bjc-r/cur/programming/7-recursion/2-projects/1-triangle-fractal.html?topic=nyc_bjc%2F6-recursion-trees-fractals.topic&course=bjc4nyc.html&novideo&noassignment" title="Triangle Fractal">In Unit 7</a>, you built a <code>triangle fractal</code> block. Build a block that reports the <em>total number of triangles</em> formed in a level <var>n</var> triangle fractal:<br />
-                    <img class="indent" src="/bjc-r/img/8-recursive-reporters/trianglecounter.png" alt="triangles in level (5) fractal reporting 121" title="triangles in level (5) fractal reporting 121"/>
+                    <div class="sidenoteBig">Vuelve a leer el c&oacute;digo del tri&aacute;ngulo fractal, y &uacute;salo para ayudarte a construir este reportero recursivo.</div><a href="/bjc-r/cur/programming/7-recursion/2-projects/1-triangle-fractal.html?topic=nyc_bjc%2F6-recursion-trees-fractals.topic&amp;course=bjc4nyc.html&amp;novideo&amp;noassignment" title="Triangle Fractal">En Unidad 7</a>, construiste un bloque de <code>tri&aacute;ngulo fractal</code>. Construye un bloque que reporte el <em>n&uacute;mero total de tri&aacute;ngulos</em> formados en un tri&aacute;ngulo fractal nivel <var>n</var>:<br>
+                    <img class="indent" src="/bjc-r/img/8-recursive-reporters/trianglecounter.png" alt="triangles in level (5) fractal reporting 121" title="triangles in level (5) fractal reporting 121">
                 </li>
                 <!--            <div class="sidenote" style="position:relative;top:730px;">What exactly is Tony's <code>map</code> block doing?</div>
                 <div class="sidenote" style="position:relative;top:1000px;">
@@ -108,5 +109,6 @@ MF and BH both feel that the rest of this page should be removed, so I'm doing i
                 </li>
             </ol>
         </div> -->
-    </body>
-</html>
+    
+
+</ol></div></body></html>
