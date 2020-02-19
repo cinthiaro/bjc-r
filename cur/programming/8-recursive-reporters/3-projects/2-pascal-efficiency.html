@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        
         <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
         <title>Unit 8 Lab 3: Recursive Reporter Projects, Page 2</title>
     </head>
     
     <body>
-        <h2>Pascal's Triangle and Efficiency</h2>
-        <div class="todo">BH an MF: block should be renamed <img class="inline" src="/bjc-r/img/8-recursive-reporters/pascals-triangle.png" alt="pascals triangle, row: () position: ()" title="pascals triangle, row: () position: ()" /> in the style used throughout the rest of the course. --MF, 4/1/19</div>
+        <h2>Tri&aacute;ngulo de Pascal y eficiencia</h2>
+        <div class="todo">BH an MF: block should be renamed <img class="inline" src="/bjc-r/img/8-recursive-reporters/pascals-triangle.png" alt="pascals triangle, row: () position: ()" title="pascals triangle, row: () position: ()"> in the style used throughout the rest of the course. --MF, 4/1/19</div>
         <div class="todo">
             <p>PG: Efficiency is important, even in the AP framework (though that's irrelevant at this time of year) but is a distraction until kids are so fluent with recursion that they're able to think about efficiency.</p>
             <p>BH: End of lab 3</p>
@@ -16,21 +17,21 @@
         </div>
         
         <p>
-        	Here's one solution to the <code>pascal</code> block:<br />
-        	<img class="indent" src="/bjc-r/img/8-recursive-reporters/pascal-script.png" alt="pascal(row)(column){if(column=0 or column=row){report(1)} else{report(pascal(row-1)(column-1) + pascal(row-1)(column))}}" title="pascal(row)(column){if(column=0 or column=row){report(1)} else{report(pascal(row-1)(column-1) + pascal(row-1)(column))}}" />
+        	Aqu&iacute; hay una soluci&oacute;n para el bloque <code>pascal</code>:<br>
+        	<img class="indent" src="/bjc-r/img/8-recursive-reporters/pascal-script.png" alt="pascal(row)(column){if(column=0 or column=row){report(1)} else{report(pascal(row-1)(column-1) + pascal(row-1)(column))}}" title="pascal(row)(column){if(column=0 or column=row){report(1)} else{report(pascal(row-1)(column-1) + pascal(row-1)(column))}}">
         </p>
-        <p>There are two base cases, the beginning and end of a row. The recursive case calculates the sum of two values in the previous row.</p>
-		<p align="center"><img src="/bjc-r/img/8-recursive-reporters/pascal145.png" alt="pascal(14)(5)" title="pascal(14)(5)"/> = <img src="/bjc-r/img/8-recursive-reporters/pascal134.png" alt="pascal(13)(4)" title="pascal(13)(4)" /> + <img src="/bjc-r/img/8-recursive-reporters/pascal135.png" alt="pascal(13)(5)" title="pascal(13)(5)" /></p>
+        <p>Hay dos casos base, el principio y el final de una fila. El caso recursivo calcula la suma de dos valores de la fila anterior.</p>
+		<p align="center"><img src="/bjc-r/img/8-recursive-reporters/pascal145.png" alt="pascal(14)(5)" title="pascal(14)(5)"> = <img src="/bjc-r/img/8-recursive-reporters/pascal134.png" alt="pascal(13)(4)" title="pascal(13)(4)"> + <img src="/bjc-r/img/8-recursive-reporters/pascal135.png" alt="pascal(13)(5)" title="pascal(13)(5)"></p>
 
-        <p>You are about to figure out how many recursive calls are needed to compute a value in Pascal's Triangle.</p>
+        <p>Est&aacute;s a punto de averiguar cu&aacute;ntas llamadas recursivas se necesitan para calcular un valor en el Tri&aacute;ngulo de Pascal.</p>
         <div class="forYouToDo" id="first">
             <ol>
-                <div class="sidenote">What could you insert inside the block to track this?</div>
-                <li>Modify your <code>pascal</code> block to keep count of how many times the block is executed.</li>
-                <li>How many times is the <code>pascal</code> block called when calculating <img src="/bjc-r/img/8-recursive-reporters/pascal145.png" alt="pascal(14)(5)" title="pascal(14)(5)" />?</li>
-                <li>What happens when you call <img src="/bjc-r/img/8-recursive-reporters/pascal205.png" alt="pascal(20)(5)" title="pascal(20)(5)"/>?</li>
+                <div class="sidenote">&iquest;Qu&eacute; podr&iacute;as insertar dentro del bloque para rastrear esto?</div>
+                <li>Modifica tu bloque <code>pascal</code> para llevar la cuenta de cu&aacute;ntas veces se ejecuta el bloque.</li>
+                <li>&iquest;Cu&aacute;ntas veces se llama el bloque <code>pascal</code>cuando se calcula<img src="/bjc-r/img/8-recursive-reporters/pascal145.png" alt="pascal(14)(5)" title="pascal(14)(5)">?</li>
+                <li>&iquest;Qu&eacute; pasa cuando llamas<img src="/bjc-r/img/8-recursive-reporters/pascal205.png" alt="pascal(20)(5)" title="pascal(20)(5)">?</li>
             </ol>
-        </div >
+        </div>
 <!--
 
         <div class="comment">This is hard to read... --MF</div>
@@ -46,8 +47,8 @@
             </ol>
         </div> -->
        	
-        <div class="sidenote">Track what <img src="/bjc-r/img/8-recursive-reporters/pascal145.png" alt="pascal(14)(5)" title="pascal(14)(5)" /> actually calls to see the redundancy.</div>
-        <p>Many of the recursive calls are redundant. For example, <img src="/bjc-r/img/8-recursive-reporters/pascal145.png" alt="pascal(14)(5)" title="pascal(14)(5)"/> will call <img src="/bjc-r/img/8-recursive-reporters/pascal103.png" alt="pascal(10)(3)" title="pascal(10)(3)" /> many times, asking for the same information.</p>
+        <div class="sidenote">Rastrea lo que Pascal<img src="/bjc-r/img/8-recursive-reporters/pascal145.png" alt="pascal(14)(5)" title="pascal(14)(5)"> realmente llama para ver la redundancia.</div>
+        <p>Muchas de las llamadas recursivas son redundantes. Por ejemplo, <img src="/bjc-r/img/8-recursive-reporters/pascal145.png" alt="pascal(14)(5)" title="pascal(14)(5)"> llamar&aacute; <img src="/bjc-r/img/8-recursive-reporters/pascal103.png" alt="pascal(10)(3)" title="pascal(10)(3)">varias veces, pidiendo la misma informaci&oacute;n.</p>
 		
 <!--        <div class="alert alert-info">
             <p align="center">pascal(10,5)</p>
@@ -55,17 +56,18 @@
             <p align="center">[pascal(8, 3) + <b style="color: red">pascal(8,4)</b>] + [<b style="color: red">pascal(8,4)</b> + pascal(8,5)]</p>
             <p align="center">pascal(7,2) + pascal(7,3) + pascal(7,3) + pascal(7,4) + pascal(7,3) + pascal(7,4) + pascal(7,4) + pascal(7,5)</p>
 			</div> -->
-        <div class="takeItFurther" >
+        <div class="takeItFurther">
             <ol type="A">
-                <div class="sidenoteBig">This technique is called <strong>memoization</strong>. This is not a typo; there's no "r" in the word. Each recorded answer is like a "memo".</div>
-                <li>Use a list structure to keep track of already-computed values of <code>pascal</code>, so that when the same inputs are given again, the function looks up the saved value instead of making more recursive calls.</li>
-				<li>There is a direct formula for <code>pascal</code> that is often used: </li>
+                <div class="sidenoteBig">Esta t&eacute;cnica es llamada <strong>memorizaci&oacute;n</strong>. Esto no es un error de imprenta; no hay una "r" en la palabra. Cada respuesta grabada es como un "memo".</div>
+                <li>Usar una estructura de lista para hacer un seguimiento de los valores ya calculados de <code>pascal</code>, de modo que cuando se dan las mismas entradas de nuevo, la funci&oacute;n busca el valor guardado en lugar de hacer llamadas m&aacute;s recursivas.</li>
+				<li>Hay una f&oacute;rmula directa para <code>pascal</code> que se utiliza frecuentemente: </li>
         		<div class="center"><span class="katex"> \text{pascal}(n,r) = \frac{n!}{r!(n-r)!}</span></div>
                 <div class="comment">PG: I'm ignoring for the moment the fact that I'm not sure we've taught enough about "quadratic time" etc. for the kids to tell.</div>
-				<p>Build a version of <code>pascal</code> that uses the formula. Compare the efficiency of this version to the recursive version, and determine whether each version runs in constant time, linear time, quadratic time, or exponential time.</p>
+				<p>Construye una versi&oacute;n de <code>pascal</code> que utilice la f&oacute;rmula. Compara la eficiencia de esta versi&oacute;n con la versi&oacute;n recursiva, y determina si cada versi&oacute;n funciona en tiempo constante, tiempo lineal, tiempo cuadr&aacute;tico o tiempo exponencial.</p>
 
             </ol>
         </div>
         
-    </body>
-</html>
+    
+
+</body></html>

@@ -1,75 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        
         <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
         <title>Unit 8 Lab 3: Recursive Reporter Projects, Page 1</title>
     </head>
 
     <body>
-        <h2>Pascal's Triangle</h2>
+        <h2>Tri&aacute;ngulo de Pascal</h2>
         <div class="todo">
             <p>PG: These are projects and should be listed as projects. Nice enough suggestions, but optional. And why are "simple ones" after all the (implicitly and, I think, really) hard stuff? It would be great to have a collection of puzzles, like the ones Parisa hands out, for kids to sink their teeth into, but /they/ already knew how to program recursively. I don't think we've provided what is needed for our kids to master that.</p>
             <p>BH: Split this lab up into the labs as they were before they were merged for no particular reason!</p>
             <p>MF: I want to review/revise.</p>
         </div>
         
-        <p>In <strong>Pascal's Triangle</strong>, each number is the sum of the two numbers above it. The numbers at the ends of each row are always 1.</p>
+        <p>En el <strong>Tri&aacute;ngulo de Pascal</strong>, cada n&uacute;mero es la suma de los dos n&uacute;meros que est&aacute;n por encima de &eacute;l. Los n&uacute;meros al final de cada fila son siempre 1.</p>
         <div class="todo"> The HTML in this triangle needs to be cleaned up. --MF </div>
         <p align="center">
-            <strong>Row 1:</strong>&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;1<br />
-            <strong>Row 2:</strong>&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;2&nbsp;&nbsp;1<br />
-            <strong>Row 3:</strong>&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;3&nbsp;&nbsp;3&nbsp;&nbsp;1<br />
-            <strong>Row 4:</strong>&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;4&nbsp;&nbsp;6&nbsp;&nbsp;4&nbsp;&nbsp;1<br />
-            <strong>Row 5:</strong>&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;5&nbsp;&nbsp;10&nbsp;&nbsp;10&nbsp;&nbsp;5&nbsp;&nbsp;1<br />
-            <strong>Row 6:</strong>&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;6&nbsp;&nbsp;15&nbsp;&nbsp;20&nbsp;&nbsp;15&nbsp;&nbsp;6&nbsp;&nbsp;1<br />			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;︙
+            <strong>Fila 1:</strong>&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;1<br>
+            <strong>Fila 2:</strong>&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;2&nbsp;&nbsp;1<br>
+            <strong>Fila&nbsp; 3:</strong>&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;3&nbsp;&nbsp;3&nbsp;&nbsp;1<br>
+            <strong>Fila&nbsp; 4:</strong>&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;4&nbsp;&nbsp;6&nbsp;&nbsp;4&nbsp;&nbsp;1<br>
+            <strong>Fila&nbsp; 5:</strong>&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;5&nbsp;&nbsp;10&nbsp;&nbsp;10&nbsp;&nbsp;5&nbsp;&nbsp;1<br>
+            <strong>Fila&nbsp; 6:</strong>&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;6&nbsp;&nbsp;15&nbsp;&nbsp;20&nbsp;&nbsp;15&nbsp;&nbsp;6&nbsp;&nbsp;1<br>			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;︙
         </p>
-        <p>For example, each 15 in Row 6 is the sum of the 5 and 10 just above it.</p>
+        <p>Por ejemplo, cada 15 de la fila 6 es la suma de los 5 y 10 que est&aacute;n justo encima.</p>
 		
         <div class="forYouToDo" id="first">
             <ol>
-                <li>Write out Row 7 of Pascal's Triangle.</li>
-                <li>
-                    Write a <code>next row</code> block that takes a row of Pascal's Triangle as its input, and reports the next row as its output:<br />
-                    <img src="/bjc-r/img/8-recursive-reporters/nextrow.png" alt="next row(list{1,4,6,4,1}) reporting {1,5,10,10,5,1}" title="next row(list{1,4,6,4,1}) reporting {1,5,10,10,5,1}" />
+                <li>Escribe la fila 7 del tri&aacute;ngulo de Pascal.</li>
+                <li>Escribe&nbsp; un bloque de <code>siguiente fila</code>&nbsp; que tome una fila del tri&aacute;ngulo de Pascal como su entrada, y reporta la siguiente fila como su salida:<br>
+                    <img src="/bjc-r/img/8-recursive-reporters/nextrow.png" alt="next row(list{1,4,6,4,1}) reporting {1,5,10,10,5,1}" title="next row(list{1,4,6,4,1}) reporting {1,5,10,10,5,1}">
                 </li>
             </ol>
         </div>
 		
 		<p>
-        	To refer to a specific number in Pascal's Triangle, you need to know its row and column. Rows are simple; columns are more complicated because of the triangle's orientation. Here is Pascal's Triangle, aligned in columns:<br />
-			<div class="todo">The alignment here is still a little messy. Some sort of tabular environment could get it more precisely right. I removed the "blockquote" environment since it italicized everything. I can't figure out how to "center" this as a block while still keeping its visible alignment. -BK<ol><li>I would fix this, but I'm not clear what's intended... -MF</li></ol></div>
-        </p>
+        	Para referirse a un n&uacute;mero espec&iacute;fico en el tri&aacute;ngulo de Pascal, necesitas saber su fila y columna. Las filas son simples; las columnas son m&aacute;s complicadas debido a la orientaci&oacute;n del tri&aacute;ngulo. Aqu&iacute; est&aacute; el tri&aacute;ngulo de Pascal, alineado en columnas:<br>
+			</p><div class="todo">The alignment here is still a little messy. Some sort of tabular environment could get it more precisely right. I removed the "blockquote" environment since it italicized everything. I can't figure out how to "center" this as a block while still keeping its visible alignment. -BK
+<ol>
+<li>I would fix this, but I'm not clear what's intended... -MF</li></ol></div>
+        <p></p>
         <p class="indent">
-            1&nbsp;&nbsp;&nbsp;1<br />
-            1&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;1<br />
-            1&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;1<br />
-            1&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;1<br />
-            1&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;10&nbsp;&nbsp;10&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;1<br />
+            1&nbsp;&nbsp;&nbsp;1<br>
+            1&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;1<br>
+            1&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;1<br>
+            1&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;1<br>
+            1&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;10&nbsp;&nbsp;10&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;1<br>
             1&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;15&nbsp;&nbsp;20&nbsp;&nbsp;15&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;1
 		</p>
-		<div class="takeNote">By convention (because it turns out to be useful), the columns in Pascal's Triangle are named starting from 0, not 1. For example, the number in row 4, column 1 of Pascal's Triangle is <strong>4</strong>, not 1.</div>
+		<div class="takeNote">Por costumbre (porque resulta &uacute;til), las columnas del Tri&aacute;ngulo de Pascal se nombran empezando por 0, no por 1. Por ejemplo, el n&uacute;mero de la fila 4, columna 1 del tri&aacute;ngulo de Pascal es&nbsp; <strong>4</strong>, no 1.</div>
 
         <div class="forYouToDo">
             <ol start="3">
-                <li>What number is in row 6, column 2 of Pascal's Triangle?</li>
-                <li>Two numbers in row 5 are added to produce the number in row 6, column 2. What are their locations?</li>
-                <li>To determine the number in row 14, column 5 of Pascal's Triangle, you would need to know two numbers from row 13. In which columns in row 13 are those numbers?</li>
+                <li>&iquest;Qu&eacute; n&uacute;mero est&aacute; en la fila 6, columna 2 del tri&aacute;ngulo de Pascal?</li>
+                <li>Se a&ntilde;aden dos n&uacute;meros en la fila 5 para obtener el n&uacute;mero de la fila 6, columna 2. &iquest;Cu&aacute;les son sus ubicaciones?</li>
+                <li>Para determinar el n&uacute;mero de la fila 14, columna 5 del tri&aacute;ngulo de Pascal, necesitar&iacute;as saber dos n&uacute;meros de la fila 13. &iquest;En qu&eacute; columnas de la fila 13 est&aacute;n esos n&uacute;meros?</li>
             </ol>
         </div>
 
-		<p>Pascal's Triangle counts the number of ways to pick a collection from larger collection. For more  about Pascal's Triangle and its uses, see <a href="/bjc-r/cur/programming/8-recursive-reporters/3-projects/extras/1-pascal-context.html" title="About Pascal's Triangle">About Pascal's Triangle page.</a></p>
+		<p>El tri&aacute;ngulo de Pascal cuenta el n&uacute;mero de formas de elegir una colecci&oacute;n de una colecci&oacute;n m&aacute;s grande. Para m&aacute;s informaci&oacute;n sobre el tri&aacute;ngulo de Pascal y sus usos, ingresa a la <a href="/bjc-r/cur/programming/8-recursive-reporters/3-projects/extras/1-pascal-context.html" title="About Pascal's Triangle">p&aacute;gina acerca del tri&aacute;ngulo de Pascal. <br></a></p>
         
-        <div class="sidenoteBig">What are the base cases? The work in earlier problems should help you figure out the recursion. Try more examples if you're not sure.</div>
+        <div class="sidenoteBig">&iquest;Cu&aacute;les son los casos base? El trabajo en problemas anteriores deber&iacute;a ayudar a resolver la recursi&oacute;n. Intenta m&aacute;s ejemplos si no est&aacute;s seguro.</div>
         
         <div class="forYouToDo">
             <ol start="6">
-            	<li>Write a <code>pascal</code> block that takes two numbers as input, <var>row</var> and <var>column</var>, and reports the value in that row and column of Pascal's Triangle.
+            	<li>Escribe un bloque <code>pascal</code> que toma dos n&uacute;meros como entrada, <var>fila</var> y <var>columna</var>,&nbsp; y reporta el valor en esa fila y columna del tri&aacute;ngulo de Pascal.
 <!--                    <p>If you prefer to solve puzzles without hints, finish the block definition now. Otherwise, turn the page.</p> -->
 	            </li>
             </ol>
         </div>
         
         
-    </body>
-</html>
+    
+
+</body></html>
