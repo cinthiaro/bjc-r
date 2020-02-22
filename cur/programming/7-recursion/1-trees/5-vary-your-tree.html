@@ -4,7 +4,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 		
 		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
-		<title>Unit 7 Lab 1: Trees in a Forest, Page 5</title>
+		<title>Unidad 7 Lab 1: Árboles en un bosque, Página 5</title>
 	</head>
 
 	<body>
@@ -20,14 +20,14 @@
 <div class="sidenoteBig">Debes revertir el script original despu&eacute;s de cada experimento, para que siempre puedas decir exactamente qu&eacute; edici&oacute;n del script se relaciona con los cambios en el escenario.</div>
                 	<ul>
                         <li>Cambia el &aacute;ngulo de giro.</li>
-                        <li>Cambiar el factor de la escala.</li>
+                        <li>Cambia el factor de la escala.</li>
                         <li>Cambia el n&uacute;mero de ramas en cada nivel.</li>
                         <li>Cambia la&nbsp; <em>estructura</em> de las ramas.<br>
 <p>Por ejemplo, los &aacute;rboles pueden tener ramas a lo largo del tronco <img src="/bjc-r/img/7-recursion/tree-with-five-branches.png" alt="tree with two branches at different locations along trunk and three branches at top" title="tree with two branches at different locations along trunk and three branches at top" height="150"> o incluso un tronco doblado <img src="/bjc-r/img/7-recursion/tree-with-bent-trunk.png" alt="tree with trunk bending to the right by 5 degrees at each place where branches emerge" title="tree with trunk bending to the right by 5 degrees at each place where branches emerge" height="165">.</p></li>
                       <div class="endnote">Cuando usas estructuras m&aacute;s complicadas o doblas el tronco, devuelves el sprite a su posici&oacute;n original&mdash;mantiene el estado de transparencia&mdash;se convierte en una molestia. En lugar de deshacer cada movimiento y girar paso a paso, puedes registrar la posici&oacute;n inicial as&iacute; 
-<p><img src="/bjc-r/img/7-recursion/set-sprite-state.png" alt="script variables(sprite state); set(sprite state) to (sprite pos and direction); set pen color to (brown)" title="script variables(sprite state); set(sprite state) to (sprite pos and direction); set pen color to (brown)" width="320"> </p> 
+<p><img src="/bjc-r/img/7-recursion/set-sprite-state.png" alt="script variables(sprite state); set(sprite state) to (sprite pos and direction); set pen color to (brown)" title="script variables(sprite state); set(sprite state) to (sprite pos and direction); set pen color to (brown)" width="450"> </p> 
 <p>utilizando un bloque como este</p> 
-<p> <img src="/bjc-r/img/7-recursion/sprite-pos-and-direction.png" alt="sprite pos and direction{report(list{x position, y position, direction})}" title="sprite pos and direction{report(list{x position, y position, direction})}" width="372"></p>y construye un bloque que retorne el sprite (estado de sprite) que retorna el sprite a su posici&oacute;n original.</div>
+<p> <img src="/bjc-r/img/7-recursion/sprite-pos-and-direction.png" alt="sprite pos and direction{report(list{x position, y position, direction})}" title="sprite pos and direction{report(list{x position, y position, direction})}" width="400"></p>y construye un bloque que retorne el sprite (estado de sprite) que retorna el sprite a su posici&oacute;n original.</div>
                     </ul>
                 </li>
             </ol>
@@ -35,10 +35,10 @@
         
         <div class="ifTime">
         	<ol start="2">
-            	<li>Cambiar el grosor de la pluma entre niveles, para que el tronco sea realmente grueso y las hojas delgadas.<br><img src="/bjc-r/img/7-recursion/thicktree.png" alt="tree with thick trunk" title="tree with thick trunk"></li>
+            	<li>Cambia el grosor de la pluma entre niveles, para que el tronco sea realmente grueso y las hojas delgadas.<br><img src="/bjc-r/img/7-recursion/thicktree.png" alt="tree with thick trunk" title="tree with thick trunk"></li>
             	<li> 
                   Haz un tronco y ramas caf&eacute; con hojas verdes.<br>
-                    <div class="sidenote">Yno tienes que hacerlo exactamente como en la foto.</div>
+                    <div class="sidenote">No tienes que hacerlo exactamente como en la foto.</div>
                     <img class="indent" src="/bjc-r/img/7-recursion/leafytree.png" alt="realistic tree" title="realistic tree"><br>
                 </li>
                 <div class="endnote">Probablemente encontraste las hojas verdes m&aacute;s dif&iacute;ciles de depurar que el grosor variable. &iquest;Qu&eacute; fue lo que fall&oacute; al dibujar las hojas verdes? &iquest;Por qu&eacute; no surgi&oacute; el mismo problema con el grosor?</div>
