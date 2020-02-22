@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
 		
 		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
-		<title>Unit 7 Lab 1: Trees in a Forest, Page 2</title>
+		<title>Unidad 7 Lab 1: Árboles en un bosque, Page 2</title>
 	</head>
 
 	<body>
@@ -35,7 +35,7 @@
                 <span>Betsy:</span>  <strong>&iexcl;Aaarghhh! &iquest;Qu&eacute; es lo que est&aacute; mal?</strong> 
             </div>
         	<div>
-                <span>Alphie:</span>&iexcl;Nunca se para! 
+                <span>Alphie:</span> &iexcl;Nunca se para!
             </div>
         	<div>
                 <span>Gamal:</span> Despu&eacute;s de que gira a la izquierda, deber&iacute;a hacer un &aacute;rbol m&aacute;s peque&ntilde;o, pero entonces se <em>supone</em> que debe terminar y girar a la derecha y hacer un &aacute;rbol all&iacute; tambi&eacute;n. 
@@ -48,7 +48,7 @@
         	<div>
                 <span>Alphie:</span> Lo entiendo. Los bloques originales numerados <span style="font-family: monospace;">&aacute;rbol</span><code> 1</code>, <code>&aacute;rbol 2</code>, etc. <em>no son</em> todos los mismos. El primero, <code>&aacute;rbol 1</code>, es diferente; s&oacute;lo dibuja una l&iacute;nea, <em>no ramas</em>, y pone al sprite de nuevo donde empez&oacute;.
                 <p> 
-                	<em>Alphie apunta al c&oacute;digo del <span style="font-family: monospace;">&aacute;rbol</span><code>1</code> y a la figura que dibuja.</em><br>
+                	<em>Alphie apunta al c&oacute;digo del <code>&aacute;rbol 1</code> y a la figura que dibuja.</em><br>
                 	<img class="indent" src="/bjc-r/img/7-recursion/tree1.png" alt="tree 1 size:(size#){move(size) steps; move(-1*size) steps}" title="tree 1 size:(size#){move(size) steps; move(-1*size) steps}">
                     <img class="indent" src="/bjc-r/img/7-recursion/tree-level1.png" alt="tree1 result: Trunk of tree drawn" title="tree1 result: Trunk of tree drawn">
                 </p>
@@ -57,10 +57,10 @@
                 <span>Betsy:</span> <strong>As&iacute; que nuestro bloque de <code>&aacute;rbol</code> recursivo tiene que hacer algo <em>diferent</em>e cuando est&aacute; en <var>nivel = 1</var></strong>
             </div>
         	<div>
-                <span>Gamal:</span> !S&iacute;! Tiene que dibujar s&oacute;lo una l&iacute;nea sin a&ntilde;adir otra rama.
+                <span>Gamal:</span> ¡S&iacute;! Tiene que dibujar s&oacute;lo una l&iacute;nea sin a&ntilde;adir otra rama.
             </div>
 
-			<div class="takeNote">Esta versi&oacute;n diferente para el nivel m&aacute;s bajo de un script recursivo se llama el <strong>caso base</strong>.</div>
+			<div class="takeNote">Esta versi&oacute;n diferente para el nivel m&aacute;s bajo de un script recursivo es llamada el <strong>caso base</strong>.</div>
 
             <div>
                 <span>Betsy:</span> Pensemos a trav&eacute;s de un simple &aacute;rbol para averiguar c&oacute;mo este "caso base" necesita funcionar. Veamos el <code>&aacute;rbol 3</code> con tama&ntilde;o 40.<br>
@@ -82,7 +82,7 @@
             <ol>
                 <li>
                     Corrige tu bloque de <code>&aacute;rbol</code> recursivo de modo que incluya un caso base que detenga el script de llamarse as&iacute; mismo para siempre. Aqu&iacute; hay dos formas en las cu&aacute;les puedes hacerlo, y hay m&aacute;s. Utiliza la que tenga m&aacute;s sentido para ti.<br>
-                <img src="/bjc-r/img/7-recursion/logic-inside-recursive-tree-v1.png" alt="if(level=1){move(size) steps; move(-1*size) steps}else{...Build more branches...}" title="if(level=1){move(size) steps; move(-1*size) steps}else{...Build more branches...}" height="363" width="405">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="/bjc-r/img/7-recursion/logic-inside-recursive-tree-v2.png" alt="move(size) steps; if(level&gt;1){...Build more branches...}; move(-1*size) steps" title="move(size) steps; if(level&gt;1){...Build more branches...}; move(-1*size) steps" height="339" width="405"></li>
+                <img src="/bjc-r/img/7-recursion/logic-inside-recursive-tree-v1.png" alt="if(level=1){move(size) steps; move(-1*size) steps}else{...Build more branches...}" title="if(level=1){move(size) steps; move(-1*size) steps}else{...Build more branches...}" height="363" width="520">  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="/bjc-r/img/7-recursion/logic-inside-recursive-tree-v2.png" alt="move(size) steps; if(level&gt;1){...Build more branches...}; move(-1*size) steps" title="move(size) steps; if(level&gt;1){...Build more branches...}; move(-1*size) steps" height="340" width="524"></li>
                 <li>
                 	Ejecuta el <code>&aacute;rbol nivel: 9 tama&ntilde;o: 50</code>. Si ahora funciona correctamente, deber&iacute;as obtener un resultado como este:<br>
 					<img class="indent" src="/bjc-r/img/7-recursion/tree-level9.jpg" alt="Tree with trunk and 8 levels of branches" title="Tree with trunk and 8 levels of branches">
