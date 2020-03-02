@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		
 		<script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
 		<title>Unit 7 Lab 1: Trees in a Forest, Page 3</title>
 	</head>
 
 	<body>
-		<h2>Self-Check: <code>Tree</code> Input</h2>
+		<h2>Auto evaluaci&oacute;n:Campo de ingreso<code> &aacute;rbol</code> </h2>
         <div class="todo">
             <p>PG: The rest of this feels like forced extension rather than expansion through new examples. Expansion allows kids to abstract out the general principles.</p>
         </div>
         
-        <p>
-        	Each of these questions refer to this version of the <code>tree</code> block and this script that calls it. Notice the blank in the <code>tree</code> <var>level</var> input slot in the calling script. Inside the <code>tree</code> script, we have changed the turning angles and size scaling factors so that the left and right branches are the same, to make the pictures of trees easier to understand.<br />
-            <img src="/bjc-r/img/7-recursion/quiztree.png" alt="tree level:(level#) size:(size#){if(level=1){move(size) steps; move(-1*size) steps}else{move(size) steps; turn counterclockwise (15) degrees; tree level:(level-1) size:(size*0.75); turn clockwise(15) degrees; turn clockwise(15) degrees; tree level:(level-1) size:(size*0.75); turn counterclockwise (15); move(-1*size) steps}}" title="tree level:(level#) size:(size#){if(level=1){move(size) steps; move(-1*size) steps}else{move(size) steps; turn counterclockwise (15) degrees; tree level:(level-1) size:(size*0.75); turn clockwise(15) degrees; turn clockwise(15) degrees; tree level:(level-1) size:(size*0.75); turn counterclockwise (15); move(-1*size) steps}}"/>
-            <img class="indent" src="/bjc-r/img/7-recursion/tree-size-100-call.png" alt="go to x:(0) y:(0); clear; point in direction(0); pen down; tree level:( ) size:(100)" title="go to x:(0) y:(0); clear; point in direction(0); pen down; tree level:( ) size:(100)" />
+        <p>Cada una de estas preguntas se refiere a esta versi&oacute;n del bloque <code>&aacute;rbol</code> y a este script que lo llama. F&iacute;jate en el espacio en blanco en el <var>nivel</var> del <code>&aacute;rbol</code> en la ranura de entrada en el script llamado. Dentro del script <span style="font-family: monospace;">&aacute;rbol</span><code></code>, hemos cambiado los &aacute;ngulos de giro y los factores de escala de tama&ntilde;o para que las ramas izquierdas y derechas sean las mismas, para que las im&aacute;genes de los &aacute;rboles sean m&aacute;s f&aacute;ciles de entender.<br>
+            <img src="/bjc-r/img/7-recursion/quiztree.png" alt="tree level:(level#) size:(size#){if(level=1){move(size) steps; move(-1*size) steps}else{move(size) steps; turn counterclockwise (15) degrees; tree level:(level-1) size:(size*0.75); turn clockwise(15) degrees; turn clockwise(15) degrees; tree level:(level-1) size:(size*0.75); turn counterclockwise (15); move(-1*size) steps}}" title="tree level:(level#) size:(size#){if(level=1){move(size) steps; move(-1*size) steps}else{move(size) steps; turn counterclockwise (15) degrees; tree level:(level-1) size:(size*0.75); turn clockwise(15) degrees; turn clockwise(15) degrees; tree level:(level-1) size:(size*0.75); turn counterclockwise (15); move(-1*size) steps}}">
+            <img class="indent" src="/bjc-r/img/7-recursion/tree-size-100-call.png" alt="go to x:(0) y:(0); clear; point in direction(0); pen down; tree level:( ) size:(100)" title="go to x:(0) y:(0); clear; point in direction(0); pen down; tree level:( ) size:(100)">
         </p>
 		<!-- Question 1 -->
-        <div class="assessment-data" type="multiplechoice" identifier="number-of-levels"
-        hasinlinefeedback="true" maxchoices="1"
-        responseIdentifier="ri1" shuffle="false">
+        <div class="assessment-data" type="multiplechoice" identifier="number-of-levels" hasinlinefeedback="true" maxchoices="1" responseidentifier="ri1" shuffle="false">
         
             <div class="prompt">
-                <img class="imageRight" src="/bjc-r/img/7-recursion/tree-level5.jpg" alt="A tree with trunk and four levels of branches" title="A tree with trunk and four levels of branches"/>
-                <p>If this picture is drawn, what number must be in the <var>level</var> input slot?</p>
-                <p>In other words, what goes in the blank in the code above to make this image? </p>
+                <img class="imageRight" src="/bjc-r/img/7-recursion/tree-level5.jpg" alt="A tree with trunk and four levels of branches" title="A tree with trunk and four levels of branches">
+                <p>Si se dibuja esta imagen, &iquest;Qu&eacute; n&uacute;mero debe haber en la ranura de la entrada del <var>nivel</var>?</p>
+                <p>En otras palabras, &iquest;Qu&eacute; va en el espacio en blanco en el c&oacute;digo de arriba para hacer esta imagen? </p>
             </div>
             
             <div class="choice" identifier="c0">
@@ -33,7 +31,7 @@
                     <b>6</b>
                 </div>
                 <div class="feedback">
-                    How many different sizes of line segment are in the picture?
+                    &iquest;Cu&aacute;ntos tama&ntilde;os diferentes de segmento de l&iacute;nea est&aacute;n en la imagen?
                 </div>
             </div>
             
@@ -42,7 +40,7 @@
                     <b>1</b>
                 </div>
                 <div class="feedback">
-                    How many different sizes of line segment are in the picture?
+                    &iquest;Cu&aacute;ntos tama&ntilde;os diferentes de segmento de l&iacute;nea est&aacute;n en la imagen?
                 </div>
             </div>
             
@@ -53,7 +51,7 @@
                     <b>5</b>
                 </div>
                 <div class="feedback">
-                    Nice! There are indeed five different levels present in the tree.
+                    &iexcl;Bien! De hecho, hay cinco niveles diferentes presentes en el &aacute;rbol.
                 </div>
             </div>
             <div class="choice" identifier="c4">
@@ -61,7 +59,7 @@
                     <b>4</b>
                 </div>
                 <div class="feedback">
-                    How many different sizes of line segment are in the picture?
+                    &iquest;Cu&aacute;ntos tama&ntilde;os diferentes de segmento de l&iacute;nea est&aacute;n en la imagen?
                 </div>
             </div>        
             <div class="responseDeclaration" identifier="ri1">
@@ -71,56 +69,54 @@
     
     
         <!-- Question 2 -->
-        <div class="assessment-data" type="multiplechoice" identifier="negative-size"
-        hasinlinefeedback="true" maxchoices="1"
-        responseIdentifier="ri2" shuffle="false">
+        <div class="assessment-data" type="multiplechoice" identifier="negative-size" hasinlinefeedback="true" maxchoices="1" responseidentifier="ri2" shuffle="false">
         
             <div class="prompt">
-                <p>What would happen if you changed the input <var>size</var> to be -100?</p>
+                <p>&iquest;Qu&eacute; pasra&iacute;a si cambias el <var>tama&ntilde;o</var> de la entrada para que sea -100?</p>
             </div>
             
             <div class="choice" identifier="c0">
                 <div class="text">
-                    <b>The program will never stop running and a lot of different branches will be drawn.</b>
+                    <b>El programa nunca dejar&aacute; de ejecutarse y se dibujar&aacute;n muchas ramas diferentes.</b>
                 </div>
                 <div class="feedback">
-                    The program will stop. Try running walking through the function step-by-step using the given inputs.
+                    El programa se detendr&aacute;. Intenta ejecutar la funci&oacute;n paso a paso usando las entradas dadas.
                 </div>
             </div>
             
             <div class="choice" identifier="c1">
                 <div class="text">
-                    <b>It will never stop running and only a single branch will be drawn.</b>
+                    <b>Nunca dejar&aacute; de ejecutarse y s&oacute;lo se dibujar&aacute; una rama.</b>
                 </div>
                 <div class="feedback">
-                    The program will stop. Try running walking through the function step-by-step using the given inputs.
+                    El programa se detendr&aacute;. Intenta ejecutar la funci&oacute;n paso a paso usando las entradas dadas.
                 </div>
             </div>
             
             <div class="choice" identifier="c2">
                 <div class="text">
-                    <b>It will work just as if the <var>size</var> were positive 100.</b>
+                    <b>Funcionar&aacute; como si el <var>tama&ntilde;o</var> fuera positivo 100.</b>
                 </div>
                 <div class="feedback">
-                    Not quite. What happens when we plug in a negative value to the <code>move</code> block?
+                    No del todo. &iquest;Qu&eacute; pasa cuando conectamos un valor negativo al bloque de<code><span style="font-family: serif;"> </span>movimiento</code> ?
                 </div>
             </div>
             
             <div class="choice" identifier="c3">
                 <div class="text">
-                    <b>The image will be flipped upside down but will otherwise look the same.</b>
+                    <b>La imagen se voltear&aacute; al rev&eacute;s, pero por lo dem&aacute;s se ver&aacute; igual.</b>
                 </div>
                 <div class="feedback">
-                    Nice! Inputting negative values to the move block will make the sprite move <em>backwards</em>.
+                    &iexcl;Bien! Introducir valores negativos en el bloque de movimiento har&aacute; que el sprite se mueva <em>hacia atr&aacute;s</em>.
                 </div>
             </div>
             
                         <div class="choice" identifier="c4">
                 <div class="text">
-                    <b>Nothing will be drawn.</b>
+                    <b>No se dibujar&aacute; nada.</b>
                 </div>
                 <div class="feedback">
-                    Something will be drawn. Try running walking through the function step-by-step using the given inputs.
+                    Algo se dibujar&aacute;. Intenta ejecutar la funci&oacute;n paso a paso usando las entradas dadas.
                 </div>
             </div>
         
@@ -130,54 +126,52 @@
         </div>
         
         <!-- Question 3 -->
-        <div class="assessment-data" type="multiplechoice" identifier="negative-levels"
-        hasinlinefeedback="true" maxchoices="1"
-        responseIdentifier="ri3" shuffle="false">
+        <div class="assessment-data" type="multiplechoice" identifier="negative-levels" hasinlinefeedback="true" maxchoices="1" responseidentifier="ri3" shuffle="false">
         
             <div class="prompt">
-                <p>What would happen if you changed the input <var>level</var> to be -4?</p>
+                <p>&iquest;Qu&eacute; pasar&iacute;a si cambias el <var>nivel</var> de entrada a -4?</p>
             </div>
             
             <div class="choice" identifier="c0">
                 <div class="text">
-                    <b>The program will never stop running, but it will draw a tree-looking tree with more and more smaller and smaller branches.</b>
+                    <b>El programa nunca dejar&aacute; de ejecutarse, pero dibujar&aacute; un &aacute;rbol con aspecto de &aacute;rbol con m&aacute;s y m&aacute;s peque&ntilde;as y m&aacute;s peque&ntilde;as ramas.</b>
                 </div>
                 <div class="feedback">
-                    It's true that the program will never stop running. Try walking through the code step-by-step to see exactly what it draws.
+                    Es cierto que el programa nunca dejar&aacute; de ejecutarse. Revisa el c&oacute;digo paso a paso para ver exactamente lo que dibuja.
                 </div>
             </div>
             
             <div class="choice" identifier="c1">
                 <div class="text">
-                    <b>It will never stop running, and the picture will be a leftward spiral with the sprite spinning around in midair.</b>
+                    <b>Nunca dejar&aacute; de ejecutarse, y la imagen ser&aacute; una espiral hacia la izquierda con el sprite girando en el aire.</b>
                 </div>
                 <div class="feedback">
-                    Correct! The function will never hit the <code>level = 1</code> case, and will only ever make the left-branch call to itself.
+                    &iexcl;Correcto! La funci&oacute;n nunca alcanzar&aacute; el caso de <code>nivel = 1</code>, y s&oacute;lo har&aacute; que la rama izquierda se llame a s&iacute; misma.
                 </div>
             </div>
             
             <div class="choice" identifier="c2">
                 <div class="text">
-                    <b>It will work just as if the <var>size</var> were positive 4.</b>
+                    <b>Funcionar&aacute; coo si el <var>tama&ntilde;o</var> fuera positivo 4.</b>
                 </div>
                 <div class="feedback">
-                    Will the recursion ever reach level 1?</div>
+                    &iquest;La recursividad alcanzar&aacute; alguna vez el nivel 1?</div>
             </div>
             
             <div class="choice" identifier="c3">
                 <div class="text">
-                    <b>The image will be flipped upside down but will otherwise look the same.</b>
+                    <b>La imagen se voltear&aacute; al rev&eacute;s, pero por lo dem&aacute;s se ver&aacute; igual.</b>
                 </div>
                 <div class="feedback">
-                    Does the <var>level</var> input affect the <code>move</code> blocks?</div>
+                    &iquest;La entrada de <var>nivel</var> afecta a los bloques de <code>movimiento<span style="font-family: serif;"></span></code>?</div>
             </div>
             
                         <div class="choice" identifier="c4">
                 <div class="text">
-                    <b>Nothing will be drawn.</b>
+                    <b>No se dibur&aacute; nada.</b>
                 </div>
                 <div class="feedback">
-                    Something will be drawn.
+                    Algo ser&aacute; dibujado.
                 </div>
             </div>
         
@@ -187,5 +181,5 @@
         </div>
 
 
-	</body>
-</html>
+	
+</body></html>

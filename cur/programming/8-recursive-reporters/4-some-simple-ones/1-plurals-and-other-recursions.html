@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        
         <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
 		<title>Unit 8 Lab 4:  Some Simple Ones, Page 1</title>
     </head>
     
     <body>
-        <h2>Walking Down a List</h2>
+        <h2>Recorriendo una lista</h2>
 		<div class="todo">BH: suggests putting this lab after the Social Implications, so that it is the last thing in the course. </div>
         <div class="todo">AC:  Still thinks that this unit should start with this lab.  Indeed, it should come much earlier in the program.  Oh well\dots </div>
         <div class="todo"><strong>Fundamental Concern:</strong> The idea seems important for this unit, but I don't buy the "you should build this some other way that isn't as efficient because we said so" approach. Find some reasonable examples of where this is useful or don't teach it. <code>Map</code> is the obvious choice for #1. I haven't decided how I feel about #2, but we give them most of the answer here at the end of the year, so what's the point? --MF, 9/26/18</div>
@@ -15,36 +16,38 @@
             <p>PG: Whole lab: I basically agree with Al here. Stuff like this should come way earlier in the year, and come up from time to time (in sensible contexts) so that kids actually learn how to do them.</p>
             <p>MF: The idea seems important for this unit, but I don't buy the "you should build this some other way that isn't as efficient because we said so" approach. Find some reasonable examples of where this is useful or don't teach it.</p>
         </div>
-        <div class="sidenote">It's a big simplification to say that adding "s" always forms the plural. If you did the optional project on Plurals and you like, you can use your work from the <code>plural</code> block you made in <a href="/bjc-r/cur/programming/2-complexity/optional-projects/5-plurals2.html" title="Modeling Language: Plurals, Part 2">Unit 2</a>.</div>
+        <div class="sidenote">Hay una gran simplificaci&oacute;n al decir que la adici&oacute;n de "s" siempre forma el plural. Si hiciste el proyecto opcional de plurales y te gust&oacute;, puedes usar tu trabajo del bloque <code>plural</code> que hiciste en <a href="/bjc-r/cur/programming/2-complexity/optional-projects/5-plurals2.html" title="Modeling Language: Plurals, Part 2">Unidad 2</a>.</div>
 
 		<p>
-            Here's the <code>plurals</code> block from Lab 1. It takes a <em>list of words</em> as input, and reports a list of the plurals of those words. Although there is a way to build this block using <code>map</code>, bear with us: there is a good reason to investigate this recursive version.<br />
-            <div class="comment">Redo the image with plain prototype labels. --MF, 9/26/18</div>
-            <img class="indent" src="/bjc-r/img/8-recursive-reporters/plurals.png" alt="plurals (words){if(empty?(words)){report(list{})}else{report(join(item(1) of (words) (s) in front of (plurals(all but first of(words))))}}" title="plurals (words){if(empty?(words)){report(list{})}else{report(join(item(1) of (words) (s) in front of (plurals(all but first of(words))))}}" />
-        </p>
+            Aqu&iacute; est&aacute; el bloque de <code>plurales</code> de laboratorio 1. Tiene una <em>lista de palabras</em> como entrada, y reporta una lista de los plurales de esas palabras. Aunque hay una forma de construir este bloque usando <code>mapa</code>, ten paciencia:&nbsp; hay una buena raz&oacute;n para investigar esta versi&oacute;n recursiva.<br>
+            </p><div class="comment">Redo the image with plain prototype labels. --MF, 9/26/18</div>
+            <img class="indent" src="/bjc-r/img/8-recursive-reporters/plurals.png" alt="plurals (words){if(empty?(words)){report(list{})}else{report(join(item(1) of (words) (s) in front of (plurals(all but first of(words))))}}" title="plurals (words){if(empty?(words)){report(list{})}else{report(join(item(1) of (words) (s) in front of (plurals(all but first of(words))))}}">
+        <p></p>
 		<div class="takeNote">
-            <p>The big idea here is that you can divide a list into its first item and all the rest of the items, form the plural of the first one, and make a recursive call for the rest. The <code>in front of</code> block may look strange at first, with its asymmetrical inputs (one item, one list), but it puts the plural of the first word and the plurals of the rest of the words back together.</p>
-			<p>This pattern of code can be used to build many useful recursive reporters that have a simple base case and a simple recursive call.</p>
+            <p>La gran idea aqu&iacute; es que puedes dividir una lista en su primer elemento y el resto de los elementos, formar el plural del primero, y hacer una llamada recursiva para el resto. El bloque <code>en frente de</code> puede parecer extra&ntilde;o al principio, con sus entradas asim&eacute;tricas (un elemento, una lista), pero vuelve a unir el plural de la primera palabra y los plurales del resto de las palabras.</p>
+			<p>Este patr&oacute;n de c&oacute;digo puede ser usado para construir muchos reporteros recursivos &uacute;tiles que tienen un simple caso base y una simple llamada recursiva.</p>
 		</div>
         <div class="forYouToDo" id="first">
-            <p><strong>Do the following exercises using recursion, not higher-order functions.</strong></p>
+            <p><strong>Realiza los siguientes ejercicios utilizando la recursi&oacute;n, no las funciones de orden superior.</strong></p>
             <ol>
                 <li>
-                    <div class="sidenote">Try modifying the code from <code>plurals</code>.</div>Make a <code>squares</code> block that takes a list of numbers as input, and reports a list of the squares of the numbers.
-                    <p><img class="indent" src="/bjc-r/img/8-recursive-reporters/squares-ex.png" alt="squares(list{7,8,1}) reporting {49,64,1}" title="squares(list{7,8,1}) reporting {49,64,1}" /></p>
+                    <div class="sidenote">Intenta modificar el c&oacute;digo de <code>plurales</code>.</div>Haz un bloque de&nbsp; <span style="font-family: monospace;">cuadrados</span><code></code> que toma una lista de n&uacute;meros como entrada, y reporta una lista de los cuadrados de los n&uacute;meros.
+                    
+<p><img class="indent" src="/bjc-r/img/8-recursive-reporters/squares-ex.png" alt="squares(list{7,8,1}) reporting {49,64,1}" title="squares(list{7,8,1}) reporting {49,64,1}"></p>
                 </li>
                 <li>
-                    Make an <code>exaggerate</code> block that takes a sentence as input, and reports a sentence in which every number in the input is doubled, "good" is replaced by "great," "bad" is replaced by "terrible," "like" is replaced by "love," and "dislike" is replaced by "hate." 
-                    <p><img class="indent" src="/bjc-r/img/8-recursive-reporters/ex-ex.png" alt="exaggerate(I ate 6 really good potstickers), reporting I ate 12 really great potstickers" title="exaggerate(I ate 6 really good potstickers), reporting I ate 12 really great potstickers" /></p>
-                    <p>To do this, use a "wrapper" function that transforms the sentence into a list of words and back again:</p>
-                    <p><img class="indent" src="/bjc-r/img/8-recursive-reporters/exaggerate.png" alt="exaggerate(sentence){report(list->sentence(exaggerate wordlist(sentence->list(sentence))))}" title="exaggerate(sentence){report(list->sentence(exaggerate wordlist(sentence->list(sentence))))}" /></p>
-                    <div class="sidenote">What should the helper function do with the other words?</div>
-                    <p>You'll also want a helper function <code>exaggerate word</code> that works on a single word, looking for specific words and types to exaggerate.</p>
+                    Haz un bloque <code>exagerar </code>que tome una frase como entrada, y reporte una frase en la que cada n&uacute;mero de la entrada se duplique, "bueno" se reemplaza por " fant&aacute;stico", "malo" se reemplaza por "terrible", " gustar" se reemplaza por "amor", y "disgustar" se reemplaza por "odio"."
+<p><img class="indent" src="/bjc-r/img/8-recursive-reporters/ex-ex.png" alt="exaggerate(I ate 6 really good potstickers), reporting I ate 12 really great potstickers" title="exaggerate(I ate 6 really good potstickers), reporting I ate 12 really great potstickers"></p>
+                    <p>Para ello, utiliza una funci&oacute;n de "envoltura" que transforma la frase en una lista de palabras y viceversa:</p>
+                    <p><img class="indent" src="/bjc-r/img/8-recursive-reporters/exaggerate.png" alt="exaggerate(sentence){report(list-&gt;sentence(exaggerate wordlist(sentence-&gt;list(sentence))))}" title="exaggerate(sentence){report(list-&gt;sentence(exaggerate wordlist(sentence-&gt;list(sentence))))}"></p>
+                    <div class="sidenote">&iquest;Qu&eacute; deber&iacute;a hacer la funci&oacute;n de asistente con las otras palabras?</div>
+                    <p>Tambi&eacute;n querr&aacute;s que la funci&oacute;n de asistente <code>exagere la palabra</code> que funciona en una sola palabra, buscando palabras y tipos espec&iacute;ficos para exagerar.</p>
                 </li>
             </ol>
         </div>
         
 		<div class="todo">AC suggestion: include both iterative and recursive solutions in this lab.</div>
 		
-    </body>
-</html>
+    
+
+</body></html>

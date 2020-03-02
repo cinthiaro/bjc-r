@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        
         <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
         <title>Unit 8 Lab 3: Recursive Reporter Projects, Page 4</title>
     </head>
     
     <body>
-        <h2>Base Conversion</h2>
+        <h2>Conversi&oacute;n base</h2>
         <div class="todo">
             <p>BH: End of lab 4.</p>
             <p>MF: I want to review/revise.</p>
         </div>
         
-        <p>Here's one solution for binary conversion of non-negative integers:</p>
-        <p><img class="indent" src="/bjc-r/img/8-recursive-reporters/tobinary.png" alt="decimal->binary(number){if(number<2){report(number)}else{report(join(decimal->binary(floor(number/2)))(number mod 2))}}" title="decimal->binary(number){if(number<2){report(number)}else{report(join(decimal->binary(floor(number/2)))(number mod 2))}}"/></p>
-        <p>If a  number can be represented with only a single  digit, we use it as the base case. For binary, the only numbers that can be represented with a single digit are 0 and 1, so we test to see if the number is less than 2. If so, we report it.</p>
-        <p><div class="sidenote">It may be surprising that we don't use an arithmetic combiner, but the desired result is a <em>numeral</em>, a text string. This is why the combiner is a string operation.</div>In the recursive case, the rightmost binary digit is the remainder when dividing the number by 2. The other digits come from a recursive call on the quotient when dividing by 2. The combiner is <code>join</code> because we want to string the digits together.</p>
+        <p>Aqu&iacute; hay una soluci&oacute;n para la conversi&oacute;n binaria de n&uacute;meros enteros no negativos:</p>
+        <p><img class="indent" src="/bjc-r/img/8-recursive-reporters/tobinary.png" alt="decimal-&gt;binary(number){if(number&lt;2){report(number)}else{report(join(decimal-&gt;binary(floor(number/2)))(number mod 2))}}" title="decimal-&gt;binary(number){if(number&lt;2){report(number)}else{report(join(decimal-&gt;binary(floor(number/2)))(number mod 2))}}"></p>
+        <p>Si un n&uacute;mero puede ser representado con un solo d&iacute;gito, lo usamos como caso base. En binario, los &uacute;nicos n&uacute;meros que pueden ser representados con un solo d&iacute;gito son el 0 y el 1, as&iacute; que hacemos una prueba para ver si el n&uacute;mero es menor de 2. Si es as&iacute;, lo reportamos.</p>
+        <p></p>
+<div class="sidenote">Puede ser sorprendente que no usemos un combinador aritm&eacute;tico, pero el resultado deseado es un <em>n&uacute;mero</em>, una cadena de texto. Por eso el combinador es una operaci&oacute;n en cadena.</div>En el caso recursivo, el d&iacute;gito binario m&aacute;s a la derecha es el restante al dividir el n&uacute;mero por 2. Los otros d&iacute;gitos vienen de una llamada recursiva sobre el cociente al dividirlo por 2. El combinador se une porque queremos encadenar los d&iacute;gitos.
+<p></p>
 
         <div class="forYouToDo" id="first">
            <div class="todo">Images should be redone so they are the same size (zoom 1.5). --MF</div>
            <ol>
                 <li>
-                    Write the <code>base7</code> block, which displays a number in base 7.<br />
-                    <img class="indent" src="/bjc-r/img/8-recursive-reporters/base7example.png" alt="base7( 9827), reporting 40436" title="base7( 9827), reporting 40436" />
+                    Escribe el bloque <code>base7</code>, que muestra un n&uacute;mero en base 7.<br>
+                    <img class="indent" src="/bjc-r/img/8-recursive-reporters/base7example.png" alt="base7( 9827), reporting 40436" title="base7( 9827), reporting 40436">
                 </li>
                 <li>
-                    Generalize the pattern with a <code>base</code> block that takes the base as a second input:<br />
-                    <img class="indent" src="/bjc-r/img/8-recursive-reporters/base2.png" alt="(9827)base(2), reporting 10011001100011" title="(9827)base(2), reporting 10011001100011" />
-                    <img class="indent" src="/bjc-r/img/8-recursive-reporters/base7.png" alt="(9827)base(7), reporting 40436" title="(9827)base(7), reporting 40436" /><br />
-                    <img class="indent" src="/bjc-r/img/8-recursive-reporters/base8.png" alt="(9827)base(8), reporting 23143" title="(9827)base(8), reporting 23143" />
-                    <img class="indent" src="/bjc-r/img/8-recursive-reporters/base10.png" alt="(9827)base(10), reporting 9827" title="(9827)base(10), reporting 9827" /><br />
+                    Generaliza el patr&oacute;n con un bloque <code>base</code> que toma la base como una segunda entrada:<br>
+                    <img class="indent" src="/bjc-r/img/8-recursive-reporters/base2.png" alt="(9827)base(2), reporting 10011001100011" title="(9827)base(2), reporting 10011001100011">
+                    <img class="indent" src="/bjc-r/img/8-recursive-reporters/base7.png" alt="(9827)base(7), reporting 40436" title="(9827)base(7), reporting 40436"><br>
+                    <img class="indent" src="/bjc-r/img/8-recursive-reporters/base8.png" alt="(9827)base(8), reporting 23143" title="(9827)base(8), reporting 23143">
+                    <img class="indent" src="/bjc-r/img/8-recursive-reporters/base10.png" alt="(9827)base(10), reporting 9827" title="(9827)base(10), reporting 9827"><br>
                     
                 </li>
                 <li>
-                    <div class="sidenote">Snap<em>!</em> will show this number in decimal, but you're converting to a <em>number</em>, not a string of digits.</div>Write the inverse function <code>from base</code> that takes a (text) string of digits and a base as inputs, and reports the corresponding number.<br />
-                    <img class="indent" src="/bjc-r/img/8-recursive-reporters/frombase.png" alt="(23143)from base(8) reporting 9827" title="(23143)from base(8) reporting 9827" />
+                    <div class="sidenote">Snap<em>!</em> mostrar&aacute; este n&uacute;mero en decimal, pero est&aacute;s convirtiendo un <em>n&uacute;mero</em>, no una cadena de d&iacute;gitos.</div>Escribe la funci&oacute;n inverse <code>de base</code> que toma una cadena (texto) de d&iacute;gitos y una base como entradas, e informa el n&uacute;mero correspondiente.<br>
+                    <img class="indent" src="/bjc-r/img/8-recursive-reporters/frombase.png" alt="(23143)from base(8) reporting 9827" title="(23143)from base(8) reporting 9827">
                 </li>
             </ol>
         </div>
 
         <div class="ifTime">
             <ol start="4">
-                <li>Improve the <code>base</code> block so that it can go up to base 36 by using the letters <code>a</code>‒<code>z</code> as digits with values 10‒35.<br />
-                <img class="indent" src="/bjc-r/img/8-recursive-reporters/common.png" alt="(32562)base(15), reporting 99ac" title="(32562)base(15), reporting 99ac" />
-                    <img class="indent" src="/bjc-r/img/8-recursive-reporters/w00zy.png" alt="(53749006)base(36) reporting w00zy" title="(53749006)base(36) reporting w00zy" />
+                <li>Mejora el bloque <code>base</code> para que pueda subir a base 36 utilizando las letras <code>a</code>‒<code>z</code> como d&iacute;gitos con valores 10‒35.<br>
+                <img class="indent" src="/bjc-r/img/8-recursive-reporters/common.png" alt="(32562)base(15), reporting 99ac" title="(32562)base(15), reporting 99ac">
+                    <img class="indent" src="/bjc-r/img/8-recursive-reporters/w00zy.png" alt="(53749006)base(36) reporting w00zy" title="(53749006)base(36) reporting w00zy">
                 </li>
-                <li>Improve the <code>from base</code> block to support bases up to 36 in the same manner.</li>
+                <li>Mejora el bloque <code>de base</code> para apoyar bases de hasta 36 de la misma manera.</li>
             </ol>
         </div>
 
@@ -62,6 +65,6 @@
 		</div> -->
     
     
-    </body>
-</html>
-            
+    
+
+            </body></html>

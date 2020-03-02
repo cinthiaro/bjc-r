@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        
         <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
         <title>Unit 8 Lab 3: Recursive Reporter Projects, Page 3</title>
     </head>
 
     <body>
-        <h2>Binary Conversion</h2>
+        <h2>Conversi&oacute;n binaria</h2>
         <div class="todo">Brian's Notes from late July 2016:
-        	<ul>
+        	
+<ul>
             	<li>One of them tried decimal to binary conversion, and ended up bringing me a solution using an integer exponentiation function because he didn't see the hint about going from right to left.  Maybe we should make that more prominent?  (He'd gotten it working but felt that his solution was too complicated and wanted to know if there was an easier way.)  (7.3.3)</li>
             </ul>
         </div>
         <div class="todo">
-            <p>PG: Do we love binary enough to keep this? I absolutely love the mathematics here. The hint page does really teach—and could be the basis for a lesson on recursion because it makes clear that one result is based on another—but it seems focused on getting /this task/ done, not on abstracting a general idea of recursion.  I think this is YADA (yet another distracting activity).</p>
-            <p>BH: Number->binary.  And merge that hints page back in.</p>
+            <p>PG: Do we love binary enough to keep this? I absolutely love the mathematics here. The hint page does really teach&mdash;and could be the basis for a lesson on recursion because it makes clear that one result is based on another&mdash;but it seems focused on getting /this task/ done, not on abstracting a general idea of recursion.  I think this is YADA (yet another distracting activity).</p>
+            <p>BH: Number-&gt;binary.  And merge that hints page back in.</p>
             <p>MF: Scrap. Was this not already in U6 as an optional project? What's different here?</p>
         </div>
         <div class="todo">
@@ -23,24 +25,25 @@
         </div>
         
         <p>
-        	In <a href="/bjc-r/cur/programming/6-computers/old/1-number-representation/1-binary.html">Unit 6</a> you learned about the binary representation of a number. In this project, you'll write a reporter <code>decimal-&gt;binary</code> that takes a <em>number</em> (which Snap<em>!</em> represents in decimal) as input, and reports a <em>string of zeros and ones</em> that represent the same number in binary:<br />
-        	<img class="indent" src="/bjc-r/img/8-recursive-reporters/9827.png" alt="decimal-&gt;binary (9827) reporting 10011001100011" title="decimal-&gt;binary (9827) reporting 10011001100011" />
+        	En <a href="/bjc-r/cur/programming/6-computers/old/1-number-representation/1-binary.html">Unidad 6</a> aprendiste sobre la representaci&oacute;n binaria de un n&uacute;mero. En este proyecto, escribir&aacute;s un reportero <code>decimal-&gt;binario</code> que toma un <em>n&uacute;mero</em> (que Snap<em>!</em> representa en decimal) como entrada, y reporta una <em>cadena de ceros y unos</em> que representan el mismo n&uacute;mero en binario:<br>
+        	<img class="indent" src="/bjc-r/img/8-recursive-reporters/9827.png" alt="decimal-&gt;binary (9827) reporting 10011001100011" title="decimal-&gt;binary (9827) reporting 10011001100011">
         </p>
         <p>
-            To solve this problem, you'll need to work with integer division into a quotient and remainder. For example, 17 ÷ 5 is <strong>3</strong> with a <strong>remainder of 2</strong>. Here's how to find the quotient and remainder in Snap<em>!</em>&thinsp;:<br />
-       		<div class="sidenote">To find <code>floor</code> you'll need the <code>sqrt</code> block, then change the operation. The <strong>floor</strong> of a number is the largest integer less than or equal to that number. The floor of &pi; is 3.</div>
-            <img class="indent" src="/bjc-r/img/8-recursive-reporters/quotient.png" alt="(floor) of (17/5), reporting 3" title="(floor) of (17/5), reporting 3" />
-            <img class="indent" src="/bjc-r/img/8-recursive-reporters/mod.png" alt="(17)mod(5), reporting 2" title="(17)mod(5), reporting 2" />
-        </p>
+            Para resolver este problema, tendr&aacute;s que trabajar con la divisi&oacute;n entera en un cociente y el restante. Por ejemplo, 17 &divide; 5 es <strong>3</strong> con un <strong>resto de 2</strong>. Aqu&iacute; est&aacute; c&oacute;mo encontrar el cociente y el restante en Snap<em>!</em>&thinsp;:<br>
+       		</p><div class="sidenote">Para encontrar <code>planta</code> necesitar&aacute;s el bloque <code>sqrt</code>, luego cambia la operaci&oacute;n. La <strong>planta</strong> de un n&uacute;mero es el mayor n&uacute;mero entero menor o igual a ese n&uacute;mero. La planta de &pi; es 3.</div>
+            <img class="indent" src="/bjc-r/img/8-recursive-reporters/quotient.png" alt="(floor) of (17/5), reporting 3" title="(floor) of (17/5), reporting 3">
+            <img class="indent" src="/bjc-r/img/8-recursive-reporters/mod.png" alt="(17)mod(5), reporting 2" title="(17)mod(5), reporting 2">
+        <p></p>
         
         <div class="todo">From AC: ask students to build the integer division block. BK: did not choose to do this because "floor" is very hard to locate. There are multiple methods to calculate the integer division, but the "floor" method is the most clear constant time method.</div>
         
         <div class="forYouToDo" id="first">
         	<ol>
-            	<li>Write the <code>decimal-&gt;binary</code> block. If you're stuck after trying as many ideas as you can think of, go to <a href="/bjc-r/cur/programming/8-recursive-reporters/3-projects/extras/3-binary-numbers-hint.html" title="Hints for Binary Conversion">Hints for Binary Conversion page</a> for some help.</li>
+            	<li>Escribe el bloque <code>decimal-&gt;binario</code> . Si te quedas estancado despu&eacute;s de probar todas las ideas que se te ocurran, puedes encontrar ayuda en la <a href="/bjc-r/cur/programming/8-recursive-reporters/3-projects/extras/3-binary-numbers-hint.html" title="Hints for Binary Conversion">P&aacute;gina de consejos para la convesi&oacute;n binaria</a>.</li>
         	</ol>
         </div>
         
         
-    </body>
-</html>
+    
+
+</body></html>

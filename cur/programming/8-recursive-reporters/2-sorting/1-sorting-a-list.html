@@ -1,56 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
     <script type="text/javascript" src="/bjc-r/llab/loader.js"></script>
     <title>Unit 8 Lab 2: Sorting, Page 1</title>
     </head>
     
     <body>
-        <h2>Sorting a List</h2>
+        <h2>Ordenando una lista</h2>
         <div class="todo">
             <p>PG: Scrap. Scrap all [in this lab]. Two reasons. (1) While sorting algorithms is an important and traditional CS topic, it's not obvious to me why they have any important role in an attract-them-in course. These are TiF for interested kids. (2) If our reason for this unit is to teach recursion, sorting is a distraction, and harder than we need to be. If anything at all, it's a culmination, not a start. I'd be happier showing kids how to march down a list and act on it. With HoFs or recursion. Power and utility. That's currently in Lab 4. Maybe earlier even than this unit?</p>
         </div>
         
         <div class="todo">
             See also the cut U3 version:
-            <ul>
+            
+<ul>
                 <li><a href="/bjc-r/cur/programming/3-lists/old/2-sorting/1-recursion.html" title="Recursion Revisited">Recursion Revisited</a></li>
                 <li><a href="/bjc-r/cur/programming/3-lists/old/2-sorting/2-selection-sort.html" title="Selection Sort">Selection Sort</a></li>
                 <li><a href="/bjc-r/cur/programming/3-lists/old/2-sorting/3-sort-by-name.html" title="Sorting Contacts by Name">Sorting Contacts by Name</a></li>
             </ul>
         </div>
-        <div class="sidenote">These are the top 8 baby girl names in the USA in 2014.</div>
+        <div class="sidenote">Estos son los 8 mejores nombres de ni&ntilde;as en los EE.UU. en 2014.</div>
 <div class="todo">BH suggestion: change order of names so Abigail isn't last; could cause confusion in describing sort algorithms. Leaving as is, since it affects multiple graphics, but a good fix.</div>
         <p>
-        	Suppose we have a list names that we want to <strong>sort</strong> in alphabetical (ascending) order:<br />
-	        <div class="sidenoteBig">These could be numbers instead of names or anything that can be compared and ordered. Numbers and words often need to be sorted in the same list.</div>
-        	<img class="indent" src="/bjc-r/img/8-recursive-reporters/unsortednames.png" alt="Eight names" title="Eight names" />
+        	Supongamos que tenemos una lista de nombres que queremos&nbsp; <strong>ordenar</strong> en orden alfab&eacute;tico (ascendente):<br>
+	        </p><div class="sidenoteBig">Podr&iacute;an ser n&uacute;meros en lugar de nombres o cualquier cosa que pueda ser comparada y ordenada. Los n&uacute;meros y las palabras a menudo necesitan ser ordenados en la misma lista.</div>
+        	<img class="indent" src="/bjc-r/img/8-recursive-reporters/unsortednames.png" alt="Eight names" title="Eight names">
             <span class="big">&rarr;</span>
-            <img src="/bjc-r/img/8-recursive-reporters/sortednames.png" alt="Eight names, sorted" title="Eight names, sorted" />
-		</p>
+            <img src="/bjc-r/img/8-recursive-reporters/sortednames.png" alt="Eight names, sorted" title="Eight names, sorted">
+		<p></p>
 <div class="todo">Kill the sentence about numbers and words; numbers don't sort numerically if you do a lexicographic sort, so mixing the two is tricky. --bh</div>
         <div class="forYouToDo" id="first">
             <ol>
-                <div class="sidenote"> Try to describe the algorithm in enough detail so that someone else could use your description to sort a list.</div>
+                <div class="sidenote"> Intenta describir el algoritmo con suficiente detalle para que alguien m&aacute;s pueda usar tu descripci&oacute;n para ordenar una lista.</div>
                 <li>
-                    <strong>Design</strong> a <em>recursive</em> algorithm for sorting the names.
+                    <strong>Dise&ntilde;a</strong> un algoritmo <em>recursivo</em> para ordenar los nombres.
                     <ul>
-                        <li>First consider your general strategy; how would <em>you</em> sort a group of names, step-by-step.</li>
-                        <li>Then consider how you would tell <em>a computer</em>, which is not as smart as you and can only perform specific procedures, how to sort a list.</li>
+                        <li>Primero considera tu estrategia general; &iquest;c&oacute;mo&nbsp; <em>clasificar&iacute;as</em> un grupo de nombres, paso a paso?.</li>
+                        <li>Entonces considera c&oacute;mo le dir&iacute;as a una <em>computadora</em>, que no es tan inteligente como t&uacute; y s&oacute;lo puede realizar procedimientos espec&iacute;ficos, c&oacute;mo ordenar una lista.</li>
                     </ul>
                 </li>
-                <li>Now <strong>build</strong> your algorithm: a <code>sort</code> reporter takes a list as input and outputs a new list of the same elements in alphabetical order. Test your algorithm using both names and numbers.</li>
+                <li>Ahora <strong>construye</strong> tu algoritmo: un reportero <code>clasificar</code> toma una lista como entrada y salida de una nueva lista de los mismos elementos en orden alfab&eacute;tico. Prueba tu algoritmo usando tanto nombres como n&uacute;meros.</li>
                 <div class="endnote">
-                    Comparing numbers and strings can be done using the same blocks, so your sorting algorithm should work equally well for names and numbers.<br />
-                    <img class="indent" src="/bjc-r/img/8-recursive-reporters/abigailava.png" alt="(Abigail)<(Ava) reporting true"  title="(Abigail)<(Ava) reporting true"  />
-                    <img class="indent" src="/bjc-r/img/8-recursive-reporters/num-lessthan.png" alt="(7)<(3) reporting false"  title="(7)<(3) reporting false" />
+                    La comparaci&oacute;n de n&uacute;meros y cadenas se puede hacer usando los mismos bloques, por lo que tu algoritmo de clasificaci&oacute;n deber&iacute;a funcionar igual de bien para los nombres y los n&uacute;meros.<br>
+                    <img class="indent" src="/bjc-r/img/8-recursive-reporters/abigailava.png" alt="(Abigail)&lt;(Ava) reporting true" title="(Abigail)&lt;(Ava) reporting true">
+                    <img class="indent" src="/bjc-r/img/8-recursive-reporters/num-lessthan.png" alt="(7)&lt;(3) reporting false" title="(7)&lt;(3) reporting false">
                 </div>		
-				<li>Share your sorting algorithms. Describe some similarities and differences between different sorting algorithms.</li>
+				<li>Comparte tus algoritmos de clasificaci&oacute;n. Describe algunas similitudes y diferencias entre los diferentes algoritmos de clasificaci&oacute;n.</li>
             </ol>
 		</div>
 
-<p>There are many different algorithms to sort a list. Sorting algorithms give the same result, but the code and efficiency can vary greatly from one algorithm to another. The next two pages highlight two frequently used sorting algorithms.</p>
+<p>Hay muchos algoritmos diferentes para ordenar una lista. Los algoritmos de clasificaci&oacute;n dan el mismo resultado, pero el c&oacute;digo y la eficiencia pueden variar mucho de un algoritmo a otro. Las siguientes dos p&aacute;ginas destacan dos algoritmos de clasificaci&oacute;n frecuentemente utilizados.</p>
 
 <!--
 
@@ -66,5 +68,6 @@
                 <li>Can you write a version of <code>odd numbered items</code> that uses (the original) <code>even numbered items</code> instead of calling itself recursively? That program structure (A calls B, B calls A) is called <em><strong>mutual recursion</strong>.</em></li>
             </ol>
         </div> -->
-    </body>
-</html>
+    
+
+</body></html>
